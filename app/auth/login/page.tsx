@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from from '../../../lib/supabase'
+import { createClient } from '../../../lib/supabase'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 
