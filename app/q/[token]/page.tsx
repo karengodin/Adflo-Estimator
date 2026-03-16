@@ -1,6 +1,6 @@
 import { createServerSupabaseClient } from '../../../lib/supabase'
 import { notFound } from 'next/navigation'
-import ClientQuestionnaire from '@/components/ClientQuestionnaire'
+import ClientQuestionnaire from '../../../components/ClientQuestionnaire'
 
 interface Props { params: Promise<{ token: string }> }
 

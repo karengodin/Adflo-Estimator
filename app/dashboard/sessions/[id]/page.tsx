@@ -1,6 +1,6 @@
 import { createServerSupabaseClient } from '../../../../lib/supabase'
 import { notFound, redirect } from 'next/navigation'
-import SessionEditor from '@/components/SessionEditor'
+import SessionEditor from '../../../../components/SessionEditor'
 
 interface Props { params: Promise<{ id: string }> }
 
