@@ -1,4 +1,4 @@
-import { createServerSupabaseClient } from '@/lib/supabase'
+import { createServerSupabaseClient } from '../../../lib/supabase'
 import { notFound } from 'next/navigation'
 import ClientQuestionnaire from '@/components/ClientQuestionnaire'
 
