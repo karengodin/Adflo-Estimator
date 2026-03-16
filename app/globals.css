@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  :root {
+    --font-inter: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-inter);
+  }
+
+  input, textarea, select {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold
+           transition-all duration-150 cursor-pointer select-none outline-none focus-visible:ring-2
+           focus-visible:ring-accent focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-blue-700 shadow-sm;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent border border-border text-muted-2 hover:bg-surface-3 hover:text-text-base;
+  }
+  .btn-danger {
+    @apply btn bg-red-soft text-red-brand border border-red-200 hover:bg-red-100;
+  }
+  .btn-green {
+    @apply btn bg-green-soft text-green-brand border border-green-200 hover:bg-green-100;
+  }
+
+  .card {
+    @apply bg-surface rounded-2xl border border-border shadow-sm p-6;
+  }
+
+  .field-group {
+    @apply flex flex-col gap-1.5;
+  }
+  .field-group label {
+    @apply text-xs font-semibold text-muted-3 uppercase tracking-wide;
+  }
+  .field-input {
+    @apply w-full rounded-xl border border-border bg-white px-3.5 py-2.5 text-sm text-text-base
+           placeholder:text-muted-3 outline-none transition
+           focus:border-accent focus:ring-2 focus:ring-accent/20;
+  }
+  .field-textarea {
+    @apply field-input resize-y min-h-[90px];
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .badge-bronze   { @apply bg-amber-50   text-amber-700   border border-amber-200; }
+  .badge-silver   { @apply bg-slate-100  text-slate-600   border border-slate-300; }
+  .badge-gold     { @apply bg-yellow-50  text-yellow-700  border border-yellow-200; }
+  .badge-enterprise { @apply bg-accent-soft text-accent   border border-blue-200; }
+
+  .pill-yes {
+    @apply rounded-full px-3.5 py-1.5 text-sm font-semibold cursor-pointer transition-all border
+           border-green-200 bg-green-soft text-green-brand;
+  }
+  .pill-no {
+    @apply rounded-full px-3.5 py-1.5 text-sm font-semibold cursor-pointer transition-all border
+           border-red-200 bg-red-soft text-red-brand;
+  }
+  .pill-unanswered {
+    @apply rounded-full px-3.5 py-1.5 text-sm font-medium cursor-pointer transition-all border
+           border-border bg-surface-2 text-muted hover:border-border-strong hover:bg-surface-3;
+  }
+}
