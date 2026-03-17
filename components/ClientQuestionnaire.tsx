@@ -34,7 +34,7 @@ export default function ClientQuestionnaire({ session: initSession, questions, l
   const [answers, setAnswers] = useState<Record<number, 'Yes' | 'No'>>(initSession.answers ?? {})
   const [submitted, setSubmitted] = useState(initSession.status === 'submitted' || initSession.status === 'closed')
   const [submitting, setSubmitting] = useState(false)
-  const saveTimer = useRef<NodeJS.Timeout>()
+  const saveTimer = useRef<NodeJS.Timeout | null>(null)
 
   const estimate = calcEstimate(answers, initSession.activated_levers ?? [], questions, lg)
   const answered = Object.keys(answers).length
