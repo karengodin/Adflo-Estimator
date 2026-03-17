@@ -29,7 +29,7 @@ export default function SessionEditor({ session, questions, logic: initLogic, on
   const [history, setHistory] = useState<any[]>(() => {
     try { return JSON.parse(localStorage.getItem('adflo_history') || '[]') } catch { return [] }
   })
-  const saveTimer = useRef<NodeJS.Timeout>()
+  const saveTimer = useRef<NodeJS.Timeout | null>(null)
 
   const estimate = calcEstimate(answers, levers, questions, lg)
   const answeredCount = Object.keys(answers).length
