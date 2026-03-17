@@ -41,7 +41,7 @@ export default function SessionEditor({ session, profile, questions, logic: init
   const [clientName, setClientName] = useState(session.client_name)
   const [status, setStatus] = useState(session.status)
   const [logicState, setLogicState] = useState(lg)
-  const saveTimer = useRef<NodeJS.Timeout>()
+  const saveTimer = useRef<NodeJS.Timeout | null>(null)
 
   const estimate = calcEstimate(answers, levers, questions, logicState)
   const answeredCount = Object.keys(answers).length
