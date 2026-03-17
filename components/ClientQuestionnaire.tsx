@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import { calcEstimate } from '../lib/estimator'
-import type { Session, Question, LogicSettings } from '../types'
+import { calcEstimate } from '@/lib/estimator'
+import type { Session, Question, LogicSettings } from '@/types'
 
 interface Props {
   session: Session
@@ -34,7 +34,7 @@ export default function ClientQuestionnaire({ session: initSession, questions, l
   const [answers, setAnswers] = useState<Record<number, 'Yes' | 'No'>>(initSession.answers ?? {})
   const [submitted, setSubmitted] = useState(initSession.status === 'submitted' || initSession.status === 'closed')
   const [submitting, setSubmitting] = useState(false)
-  const saveTimer = useRef<NodeJS.Timeout | null>(null)
+  const saveTimer = useRef<NodeJS.Timeout>()
 
   const estimate = calcEstimate(answers, initSession.activated_levers ?? [], questions, lg)
   const answered = Object.keys(answers).length

@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { calcEstimate, TIER_COLORS } from '../lib/estimator'
-import type { Session, Question, LogicSettings } from '../types'
+import { calcEstimate, TIER_COLORS } from '@/lib/estimator'
+import type { Session, Question, LogicSettings } from '@/types'
 
 interface Props {
   session: Session & { answers: Record<number, 'Yes' | 'No'>; activated_levers: number[] }

@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import { createServerSupabaseClient } from '../../../../lib/supabase-server'
-import { calcEstimate, DEFAULT_LOGIC, DEFAULT_QUESTIONS } from '../../../../lib/estimator'
+import { createServerSupabaseClient } from '@/lib/supabase'
+import { calcEstimate, DEFAULT_LOGIC, DEFAULT_QUESTIONS } from '@/lib/estimator'
 
 interface Context { params: Promise<{ id: string }> }
 
