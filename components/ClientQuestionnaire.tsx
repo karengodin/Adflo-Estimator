@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react'
 import { calcEstimate } from '../lib/estimator'
-import type { Session, Question, LogicSettings } from '@/types'
+import type { Session, Question, LogicSettings } from '../types'
 
 interface Props {
   session: Session

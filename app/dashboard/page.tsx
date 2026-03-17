@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getTier } from '../../lib/estimator'
 import { DEFAULT_LOGIC } from '../../lib/estimator'
-import type { Session } from '@/types'
+import type { Session } from '../../types'
 import NewSessionButton from '../../components/NewSessionButton'
 
 export default async function DashboardPage() {

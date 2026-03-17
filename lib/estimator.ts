@@ -1,4 +1,4 @@
-import type { Question, LogicSettings, TierConfig, EstimateResult } from '@/types'
+import type { Question, LogicSettings, TierConfig, EstimateResult } from '../types'
 
 export const DEFAULT_LOGIC: LogicSettings = {
   id: 'default',
