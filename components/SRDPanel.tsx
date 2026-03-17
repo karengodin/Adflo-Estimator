@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { calcEstimate, TIER_COLORS } from '@/lib/estimator'
+import { calcEstimate, TIER_COLORS } from '../lib/estimator'
 import type { Session, Question, LogicSettings } from '@/types'
 
 interface Props {

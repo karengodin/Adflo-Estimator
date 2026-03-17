@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { calcEstimate, TIER_COLORS } from '@/lib/estimator'
+import { calcEstimate, TIER_COLORS } from '../lib/estimator'
 import type { Session, Profile, Question, LogicSettings, HistoryEntry } from '@/types'
 import SRDPanel from './SRDPanel'
 
